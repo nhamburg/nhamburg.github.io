@@ -1,0 +1,115 @@
+* {
+  font-family: Montserrat;
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  margin: auto;
+}
+
+header {
+  width: 100vw;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  background-image: url('https://brueserwebdesign.de/wp-content/uploads/2023/09/code-og.webp');
+  background-size: fixed;
+  background-position: center;
+  padding: 50px;
+}
+
+h1 {
+  color: #FFF;
+  width: 100%;
+  margin: 0;
+}
+
+p {
+  width: 60%;
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+table, th, td {
+  border: 1px solid #000;
+  border-collapse: collapse;
+  padding: 7px;
+  width: 60%;
+}
+
+.list {
+  width: 60%;
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.list ul {
+  list-style-type: none; 
+  padding-left: 0;
+  margin: 0;
+}
+
+hr {
+  color: #ddd;
+  width: 100%;
+  margin-top: 40px;
+}
+
+#blue {
+  color: blue;
+}
+
+#green {
+  color: green;
+}
+
+#red {
+  color: red;
+}
+#sat {
+  color: hsl(200, 80%, 20%)
+}
+
+#lit {
+  color: hsl(200, 20%, 80%)
+}
+
+#blue-color {
+  color: blue;
+}
+
+#blue-hex {
+  color: #00F;
+}
+
+#blue-rgb {
+  color: rgb(0, 0, 255);
+}
+
+#blue-hsl {
+  color: hsl(240, 100%, 50%);
+}
+
+#blue-oprgba{
+  color: rgba(0, 0, 255, 0.5); 
+}
+
+#blue-ophsla{
+  color: hsla(240, 100%, 50%, 0.5); 
+}
+
+footer {
+  height: 60px;
+  background-color: hsl(240, 70%, 90%);
+  margin-top: 50px;
+}
