@@ -2,85 +2,170 @@
 <html>
   <head>
     <title>Html and css cheatsheet</title>
-    <link href="./resources/styles.css" rel="stylesheet">
+    <link href="./styles.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   </head>
   <body>
+  <div class="page-wrapper">
     <header>
       <h1>Html/CSS Cheatsheet</h1>
     </header>
-    <div class="tables">
-      <h2>Tables</h2>
-      <p>A table is used to show data that can be evaluated
-        or assigned to a criteria</p>
-      <p>For a table you will use a <strong>&lt;table&gt;</strong> tag then for the table headings 
-      you will use the <strong>&lt;th&gt;</strong> tag and for the table data the <strong>&lt;td&gt;</strong> tag. The <strong>&lt;th&gt;</strong> and <strong>&lt;td&gt;</strong> tags will be surrounded per table row with a <strong>&lt;tr&gt;</strong> tag</p>
-      <p>The table below was created using this scheme:</p>
-      <div class="list">
-      <ul>
-        <li>&lt;table&gt;</li>
-        <li>&lt;tr&gt;</li>
-        <li>&lt;th&gt;GPU&lt;/th&gt;</li>
-        <li>&lt;th&gt;Price&lt;/th&gt;</li>
-        <li>&lt;th&gt;Release&lt;/th&gt;</li>
-        <li>&lt;/tr&gt;</li>
-        <li>&lt;tr&gt;</li>
-        <li>&lt;td&gt;NVIDIA Geforce RTX 5090&lt;/td&gt;</li>
-        <li>&lt;td&gt;ca. 2500€&lt;/td&gt;</li>
-        <li>&lt;td&gt;2025&lt;/td&gt;</li>
-        <li>&lt;/tr&gt;</li>
-        <li>&lt;/table&gt;</li>
-      </ul>
+    <div class="collapsible-container">
+      <div class="collapsible-header">
+        <span class="arrow">▼</span>
+        <h2 class="title">Tables</h2>
       </div>
-      <table>
-        <tr>
-          <th>GPU</th>
-          <th>Price</th>
-          <th>Release</th>
-        </tr>
-        <tr>
-          <td>NVIDIA Geforce RTX 5090</td>
-          <td>ca. 2500€</td>
-          <td>2025</td>
-        </tr>
-        <tr>
-          <td>NVIDIA Geforce RTX 4090</td>
-          <td>ca. 2800€</td>
-          <td>2022</td>
-        </tr>
-        <tr>
-          <td>AMD RX 9070XT</td>
-          <td>ca. 700€</td>
-          <td>2025</td>
-        </tr>
-      </table>
-      <h2>Table styling</h2>
-      <p>In order to center the table you will use <strong>margin: auto;</strong> for the <strong>table</strong> element in your css file
-      <p>For the tables borders you will use <strong>border: 1px solid #000;</strong> and <strong>border-collapse: collapse;</strong> on the elements <strong>table, th, td</strong> because otherwise if you would try to use it on <strong>tr</strong> it won't work
-      <p>The rest of the styling to make it more readable you will use <strong>padding: 7px;</strong> and <strong>width: 60%.</strong> But those values can be adjusted as needed
-      </p>
-      <hr>
+      <div class="tables collapse">
+        <p>
+          A table is used to show data that can be evaluated
+          or assigned to a criteria
+        </p>
+        <p>
+          For a table you will use a <strong>&lt;table&gt;</strong> tag then for the table headings 
+          you will use the <strong>&lt;th&gt;</strong> tag and for the table data the <strong>&lt;td&gt;</strong> tag. 
+          The <strong>&lt;th&gt;</strong> and <strong>&lt;td&gt;</strong> tags will be surrounded per table row with a <strong>&lt;tr&gt;</strong> tag
+        </p>
+        <p>
+          The table below was created using this scheme:
+        </p>
+        <div class="list">
+          <ul>
+            <li>&lt;table&gt;</li>
+            <li>&lt;tr&gt;</li>
+            <li>&lt;th&gt;GPU&lt;/th&gt;</li>
+            <li>&lt;th&gt;Price&lt;/th&gt;</li>
+            <li>&lt;th&gt;Release&lt;/th&gt;</li>
+             <li>&lt;/tr&gt;</li>
+            <li>&lt;tr&gt;</li>
+            <li>&lt;td&gt;NVIDIA Geforce RTX 5090&lt;/td&gt;</li>
+            <li>&lt;td&gt;ca. 2500€&lt;/td&gt;</li>
+            <li>&lt;td&gt;2025&lt;/td&gt;</li>
+            <li>&lt;/tr&gt;</li>
+            <li>&lt;/table&gt;</li>
+           </ul>
+         </div>
+        <table>
+          <tr>
+            <th>GPU</th>
+            <th>Price</th>
+            <th>Release</th>
+          </tr>
+          <tr>
+            <td>NVIDIA Geforce RTX 5090</td>
+            <td>ca. 2500€</td>
+            <td>2025</td>
+          </tr>
+          <tr>
+            <td>NVIDIA Geforce RTX 4090</td>
+            <td>ca. 2800€</td>
+            <td>2022</td>
+          </tr>
+          <tr>
+            <td>AMD RX 9070XT</td>
+            <td>ca. 700€</td>
+            <td>2025</td>
+          </tr>
+         </table>
+        <h2>Table styling</h2>
+        <p>
+          In order to center the table you will use <strong>margin: auto;</strong> for the <strong>table</strong> element in your css file
+        </p>
+        <p>
+          For the tables borders you will use <strong>border: 1px solid #000;</strong> and <strong>border-collapse: collapse;</strong> 
+          on the elements <strong>table, th, td</strong> because otherwise if you would try to use it on <strong>tr</strong> it won't work
+        </p>
+        <p>
+          The rest of the styling to make it more readable you will use <strong>padding: 7px;</strong> and <strong>width: 60%.</strong> 
+          But those values can be adjusted as needed
+        </p>
+        <hr>
+      </div>
     </div>
-    <div class="colors">
-      <h2>Colors</h2>
-      <p>With html and CSS there multiple ways to utilize colors. There are the standard built-in colors like <strong id="blue">blue</strong>, <strong id="green">green</strong>, <strong id="red">red</strong> and on the other hand there are hsl colors which offer a much greater color palette where you can even customize saturation and lightness. For example these are the same colors but this one <strong id="sat">is much more saturated and darker</strong> and this one<strong id="lit"> is less saturated and lighter</strong>
-      </p>
-      <p>
-        There are different options to set colors. You can control the color of the text elements within an element with the <strong>color:</strong> property and the background color with the <strong>background-color:</strong> property</p>
-      <h2>Practice</h2>
-      <p>Here are different possibilites to set the same color</p>
-      <div class="list">
-        <ul>
-          <li id="blue-color">color: blue;</li>
-          <li id="blue-hex">color: #00F;</li>
-          <li id="blue-rgb">color: rgb(0, 0, 255);</li>
-          <li id="blue-hsl">color: hsl(240, 100%, 50%);</li>
+    <div class="collapsible-container">
+      <div class="collapsible-header">
+        <span class="arrow">▼</span>
+        <h2 class="title">Breadcrumbs</h2>
+      </div>
+      <div class="breadcrumbs collapse">
+        <p>
+          There is an option to make a website more approachable for users which is called 
+          <strong><a href="https://www.w3schools.com/howto/howto_css_breadcrumbs.asp">breadcrumbs</a></strong>
+        </p>
+        <p>
+          <strong>Breadcrumbs</strong> allow the user to see their clicking flow and make it possible to switch dynamically in between those pages. 
+          They are usually oriented on the top the left side of a page
+        </p>
+        <p>
+          In order to create <strong>breadcrumbs</strong> you will have to create an unordered list <strong>&lt;ul&gt;</strong> 
+          with anchor elements <strong>&lt;a&gt;</strong> inside of the list elements <strong>&lt;li&gt;</strong>. 
+          This is how an example of a <strong>breadcrumb</strong> with styling can look like:
+        </p>
+        <ul class="breadcrumb">
+          <li><a href="#">Hardware</a></li>
+          <li><a href="#">GPU</a></li>
+          <li><a href="#">NVIDIA Geforce RTX 3060</a></li>
         </ul>
+        <h2>Styling</h2>
+        <p>
+          The styling for this type is very advanced. Therefore is here a link to the styling css where you can see the styling for the 
+          <strong>breadcrumbs</strong> under the <strong>breadcrumbs</strong> section: 
+          <strong><a href="https://github.com/nhamburg/nhamburg.github.io/blob/main/resources/styles.css">css file</a></strong>
+        </p>
+        <hr>
       </div>
-      <p>However, <strong>rgb</strong> and <strong>hsl</strong> have the option to customize the property <strong>opacity</strong>. In order to do this you will have to call it for example <strong id="blue-oprgba">rgba(0, 0, 255, 0.5)</strong> this will give it 50% opacity. The same goes for <strong id="blue-ophsla">hsla(240, 100%, 50%, 0.5)<strong>
     </div>
+    <div class="collapsible-container">
+      <div class="collapsible-header">
+        <span class="arrow">▼</span>
+        <h2 class="title">Colors</h2>
+      </div>
+      <div class="colors collapse">
+        <p>
+          With html and CSS there multiple ways to utilize colors. There are the standard built-in colors 
+          like <strong id="blue">blue</strong>, <strong id="green">green</strong>, <strong id="red">red</strong> 
+          and on the other hand there are hsl colors which offer a much greater color palette where you can even 
+          customize saturation and lightness. For example these are the same colors but this one <strong id="sat">is much 
+          more saturated and darker</strong> and this one<strong id="lit"> is less saturated and lighter</strong></p>
+        <p>
+          There are different options to set colors. You can control the color of the text elements within an element with the 
+          <strong>color:</strong> property and the background color with the <strong>background-color:</strong> property
+        </p>
+        <h2>Practice</h2>
+        <p>
+          Here are different possibilites to set the same color
+        </p>
+        <div class="list">
+          <ul>
+            <li id="blue-color">color: blue;</li>
+            <li id="blue-hex">color: #00F;</li>
+            <li id="blue-rgb">color: rgb(0, 0, 255);</li>
+            <li id="blue-hsl">color: hsl(240, 100%, 50%);</li>
+          </ul>
+        </div>
+        <p>
+          However, <strong>rgb</strong> and <strong>hsl</strong> have the option to customize the property <strong>opacity</strong>. 
+          In order to do this you will have to call it for example <strong id="blue-oprgba">rgba(0, 0, 255, 0.5)</strong> this will give it 50% opacity. 
+          The same goes for <strong id="blue-ophsla">hsla(240, 100%, 50%, 0.5)</strong>
+        </p>
+        <hr>
+      </div>
+    </div>
+    <div class="placeholder"></div>
     <footer></footer>
+  </div>
   </body>
 </html>
+
+<script>
+  // just to make each topic collabsable
+  document.querySelectorAll('.collapsible-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const content = header.nextElementSibling;
+      const arrow = header.querySelector('.arrow');
+      content.classList.toggle('closed');
+      arrow.classList.toggle('rotated');
+    });
+  });
+</script>
