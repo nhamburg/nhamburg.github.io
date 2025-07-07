@@ -2,7 +2,8 @@
 <html>
   <head>
     <title>Html and css cheatsheet</title>
-    <link href="./resources/styles.css" rel="stylesheet">
+    <link href="./resources/css/styles.css" rel="stylesheet">
+    <link href="./resources/images/IconCodeFish_Rounded.ico" rel="icon" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -128,7 +129,7 @@
       </div>
       <div class="colors collapse">
         <p>
-          With html and CSS there multiple ways to utilize colors. There are the standard built-in colors 
+          With html and CSS there are multiple ways to utilize colors. There are the standard built-in colors 
           like <strong id="blue">blue</strong>, <strong id="green">green</strong>, <strong id="red">red</strong> 
           and on the other hand there are hsl colors which offer a much greater color palette where you can even 
           customize saturation and lightness. For example these are the same colors but this one <strong id="sat">is much 
@@ -158,13 +159,24 @@
       </div>
     </div>
     <div class="placeholder"></div>
-    <footer></footer>
+    <footer>
+      <div class="footer-left">
+        <a href="https://github.com/nhamburg" target="_blank" id="author">Author: nhamburg</a>
+      </div>
+      <div class="footer-center">
+        <div class="fish-wrapper">
+          <img src="./resources/images/Brackets.png" alt="Brackets" class="footer-img bracket">
+          <img src="./resources/images/Fish.png" alt="Fish" class="footer-img fish">
+        </div>
+      </div>
+      <div class="footer-right"></div>
+    </footer>
   </div>
   </body>
 </html>
 
 <script>
-  // just to make each topic collabsable
+  // just to make each topic collapsible
   document.querySelectorAll('.collapsible-header').forEach(header => {
     header.addEventListener('click', () => {
       const content = header.nextElementSibling;
