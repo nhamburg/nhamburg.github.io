@@ -1,192 +1,231 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Html and css cheatsheet</title>
-    <link href="./resources/css/styles.css" rel="stylesheet">
-    <link href="./resources/images/IconCodeFish_Rounded.ico" rel="icon" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  </head>
-  <body>
-  <div class="page-wrapper">
-    <header>
-      <h1>Html/CSS Cheatsheet</h1>
-    </header>
-    <div class="nav-bar">
-      <nav class="nav"><a href="#container-1">Tables</a></nav>
-      <nav class="nav"><a href="#container-2">Breadcrumbs</a></nav>
-      <nav class="nav"><a href="#container-3">Colors</a></nav>
-    </div>
-    <div class="collapsible-container" id="container-1">
-      <div class="collapsible-header">
-        <span class="arrow">▼</span>
-        <h2 class="title">Tables</h2>
-      </div>
-      <div class="tables collapse" id="tables">
-        <p>
-          A table is used to show data that can be evaluated
-          or assigned to a criteria
-        </p>
-        <p>
-          For a table you will use a <strong>&lt;table&gt;</strong> tag then for the table headings 
-          you will use the <strong>&lt;th&gt;</strong> tag and for the table data the <strong>&lt;td&gt;</strong> tag. 
-          The <strong>&lt;th&gt;</strong> and <strong>&lt;td&gt;</strong> tags will be surrounded per table row with a <strong>&lt;tr&gt;</strong> tag
-        </p>
-        <p>
-          The table below was created using this scheme:
-        </p>
-        <div class="list">
-          <ul>
-            <li>&lt;table&gt;</li>
-            <li>&lt;tr&gt;</li>
-            <li>&lt;th&gt;GPU&lt;/th&gt;</li>
-            <li>&lt;th&gt;Price&lt;/th&gt;</li>
-            <li>&lt;th&gt;Release&lt;/th&gt;</li>
-             <li>&lt;/tr&gt;</li>
-            <li>&lt;tr&gt;</li>
-            <li>&lt;td&gt;NVIDIA Geforce RTX 5090&lt;/td&gt;</li>
-            <li>&lt;td&gt;ca. 2500€&lt;/td&gt;</li>
-            <li>&lt;td&gt;2025&lt;/td&gt;</li>
-            <li>&lt;/tr&gt;</li>
-            <li>&lt;/table&gt;</li>
-           </ul>
-         </div>
-        <table>
-          <tr>
-            <th>GPU</th>
-            <th>Price</th>
-            <th>Release</th>
-          </tr>
-          <tr>
-            <td>NVIDIA Geforce RTX 5090</td>
-            <td>ca. 2500€</td>
-            <td>2025</td>
-          </tr>
-          <tr>
-            <td>NVIDIA Geforce RTX 4090</td>
-            <td>ca. 2800€</td>
-            <td>2022</td>
-          </tr>
-          <tr>
-            <td>AMD RX 9070XT</td>
-            <td>ca. 700€</td>
-            <td>2025</td>
-          </tr>
-         </table>
-        <h2>Table styling</h2>
-        <p>
-          In order to center the table you will use <strong>margin: auto;</strong> for the <strong>table</strong> element in your css file
-        </p>
-        <p>
-          For the tables borders you will use <strong>border: 1px solid #000;</strong> and <strong>border-collapse: collapse;</strong> 
-          on the elements <strong>table, th, td</strong> because otherwise if you would try to use it on <strong>tr</strong> it won't work
-        </p>
-        <p>
-          The rest of the styling to make it more readable you will use <strong>padding: 7px;</strong> and <strong>width: 60%.</strong> 
-          But those values can be adjusted as needed
-        </p>
-        <hr>
-      </div>
-    </div>
-    <div class="collapsible-container" id="container-2">
-      <div class="collapsible-header">
-        <span class="arrow">▼</span>
-        <h2 class="title">Breadcrumbs</h2>
-      </div>
-      <div class="breadcrumbs collapse">
-        <p>
-          There is an option to make a website more approachable for users which is called 
-          <strong><a href="https://www.w3schools.com/howto/howto_css_breadcrumbs.asp" target="_blank">breadcrumbs</a></strong>
-        </p>
-        <p>
-          <strong>Breadcrumbs</strong> allow the user to see their clicking flow and make it possible to switch dynamically in between those pages. 
-          They are usually oriented on the top the left side of a page
-        </p>
-        <p>
-          In order to create <strong>breadcrumbs</strong> you will have to create an unordered list <strong>&lt;ul&gt;</strong> 
-          with anchor elements <strong>&lt;a&gt;</strong> inside of the list elements <strong>&lt;li&gt;</strong>. 
-          Here are examples for the three different types: <strong>Location, Attribute</strong> and 
-          <strong>Path</strong> based <strong>breadcrumbs</strong> with styling:
-        </p>
-        <p>Location based</p>
-        <ul class="breadcrumb">
-          <li><a href="#container-2">Hardware</a></li>
-          <li><a href="#container-2">GPU</a></li>
-          <li><a href="#container-2">NVIDIA Geforce RTX 3060</a></li>
-        </ul>
-        <p>Attribute based</p>
-        <ul class="breadcrumb">
-          <li><a href="#container-2">Apple</a></li>
-          <li><a href="#container-2">Red</a></li>
-          <li><a href="#container-2">Big</a></li>
-        </ul>
-        <p>Path based</p>
-        <ul class="breadcrumb">
-          <li><a href="#container-2">About</a></li>
-          <li><a href="#container-2">Home</a></li>
-          <li><a href="#container-2">Login</a></li>
-        </ul>
-        <h2>Styling</h2>
-        <p>
-          The styling for this type is very advanced. Therefore is here a link to the styling css where you can see the styling for the 
-          <strong>breadcrumbs</strong> under the <strong>breadcrumbs</strong> section: 
-          <strong><a href="https://github.com/nhamburg/nhamburg.github.io/blob/main/resources/css/styles.css" target="_blank">css file</a></strong>
-        </p>
-        <hr>
-      </div>
-    </div>
-    <div class="collapsible-container" id="container-3">
-      <div class="collapsible-header">
-        <span class="arrow">▼</span>
-        <h2 class="title">Colors</h2>
-      </div>
-      <div class="colors collapse">
-        <p>
-          With html and CSS there are multiple ways to utilize colors. There are the standard built-in colors 
-          like <strong id="blue">blue</strong>, <strong id="green">green</strong>, <strong id="red">red</strong> 
-          and on the other hand there are hsl colors which offer a much greater color palette where you can even 
-          customize saturation and lightness. For example these are the same colors but this one <strong id="sat">is much 
-          more saturated and darker</strong> and this one<strong id="lit"> is less saturated and lighter</strong></p>
-        <p>
-          There are different options to set colors. You can control the color of the text elements within an element with the 
-          <strong>color:</strong> property and the background color with the <strong>background-color:</strong> property
-        </p>
-        <h2>Practice</h2>
-        <p>
-          Here are different possibilities to set the same color
-        </p>
-        <div class="list">
-          <ul>
-            <li id="blue-color">color: blue;</li>
-            <li id="blue-hex">color: #00F;</li>
-            <li id="blue-rgb">color: rgb(0, 0, 255);</li>
-            <li id="blue-hsl">color: hsl(240, 100%, 50%);</li>
-          </ul>
-        </div>
-        <p>
-          However, <strong>rgb</strong> and <strong>hsl</strong> have the option to customize the property <strong>opacity</strong>. 
-          In order to do this you will have to call it for example <strong id="blue-oprgba">rgba(0, 0, 255, 0.5)</strong> this will give it 50% opacity. 
-          The same goes for <strong id="blue-ophsla">hsla(240, 100%, 50%, 0.5)</strong>
-        </p>
-        <hr>
-      </div>
-    </div>
-    <div class="placeholder"></div>
-    <footer>
-      <div class="footer-left">
-        <a href="https://github.com/nhamburg" target="_blank" id="author">Author: nhamburg</a>
-      </div>
-      <div class="footer-center">
-        <div class="fish-wrapper">
-          <img src="./resources/images/Brackets.png" alt="Brackets" class="footer-img bracket">
-          <img src="./resources/images/Fish.png" alt="Fish" class="footer-img fish">
-        </div>
-      </div>
-      <div class="footer-right"></div>
-    </footer>
+<html>
+<head>
+  <title>Html and css cheatsheet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="./resources/css/styles.css" rel="stylesheet">
+  <link href="./resources/images/IconCodeFish_Rounded.ico" rel="icon" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="page-wrapper">
+  <header>
+    <h1>Html/CSS Cheatsheet</h1>
+  </header>
+  <div class="nav-bar">
+    <nav class="nav"><a href="#container-1">Tables</a></nav>
+    <nav class="nav"><a href="#container-2">Breadcrumbs</a></nav>
+    <nav class="nav"><a href="#container-3">Colors</a></nav>
+    <nav class="nav"><a href="#container-4">Web Responsiveness</a></nav>
   </div>
-  </body>
+  <div class="collapsible-container" id="container-1">
+    <div class="collapsible-header">
+      <span class="arrow">▼</span>
+      <h2 class="title">Tables</h2>
+    </div>
+    <div class="tables collapse" id="tables">
+      <p>
+        A table is used to show data that can be evaluated
+        or assigned to a criteria
+      </p>
+      <p>
+        For a table you will use a <strong>&lt;table&gt;</strong> tag then for the table headings
+        you will use the <strong>&lt;th&gt;</strong> tag and for the table data the <strong>&lt;td&gt;</strong> tag.
+        The <strong>&lt;th&gt;</strong> and <strong>&lt;td&gt;</strong> tags will be surrounded per table row with a <strong>&lt;tr&gt;</strong> tag
+      </p>
+      <p>
+        The table below was created using this scheme:
+      </p>
+      <div class="list">
+        <ul>
+          <li>&lt;table&gt;</li>
+          <li>&lt;tr&gt;</li>
+          <li>&lt;th&gt;GPU&lt;/th&gt;</li>
+          <li>&lt;th&gt;Price&lt;/th&gt;</li>
+          <li>&lt;th&gt;Release&lt;/th&gt;</li>
+          <li>&lt;/tr&gt;</li>
+          <li>&lt;tr&gt;</li>
+          <li>&lt;td&gt;NVIDIA Geforce RTX 5090&lt;/td&gt;</li>
+          <li>&lt;td&gt;ca. 2500€&lt;/td&gt;</li>
+          <li>&lt;td&gt;2025&lt;/td&gt;</li>
+          <li>&lt;/tr&gt;</li>
+          <li>&lt;/table&gt;</li>
+        </ul>
+      </div>
+      <table>
+        <tr>
+          <th>GPU</th>
+          <th>Price</th>
+          <th>Release</th>
+        </tr>
+        <tr>
+          <td>NVIDIA Geforce RTX 5090</td>
+          <td>ca. 2500€</td>
+          <td>2025</td>
+        </tr>
+        <tr>
+          <td>NVIDIA Geforce RTX 4090</td>
+          <td>ca. 2800€</td>
+          <td>2022</td>
+        </tr>
+        <tr>
+          <td>AMD RX 9070XT</td>
+          <td>ca. 700€</td>
+          <td>2025</td>
+        </tr>
+      </table>
+      <h2>Table styling</h2>
+      <p>
+        In order to center the table you will use <strong>margin: auto;</strong> for the <strong>table</strong> element in your css file
+      </p>
+      <p>
+        For the tables borders you will use <strong>border: 1px solid #000;</strong> and <strong>border-collapse: collapse;</strong>
+        on the elements <strong>table, th, td</strong> because otherwise if you would try to use it on <strong>tr</strong> it won't work
+      </p>
+      <p>
+        The rest of the styling to make it more readable you will use <strong>padding: 7px;</strong> and <strong>width: 60%.</strong>
+        But those values can be adjusted as needed
+      </p>
+      <hr>
+    </div>
+  </div>
+  <div class="collapsible-container" id="container-2">
+    <div class="collapsible-header">
+      <span class="arrow">▼</span>
+      <h2 class="title">Breadcrumbs</h2>
+    </div>
+    <div class="breadcrumbs collapse">
+      <p>
+        There is an option to make a website more approachable for users which is called
+        <strong><a href="https://www.w3schools.com/howto/howto_css_breadcrumbs.asp">breadcrumbs</a></strong>
+      </p>
+      <p>
+        <strong>Breadcrumbs</strong> allow the user to see their clicking flow and make it possible to switch dynamically in between those pages.
+        They are usually oriented on the top the left side of a page
+      </p>
+      <p>
+        In order to create <strong>breadcrumbs</strong> you will have to create an unordered list <strong>&lt;ul&gt;</strong>
+        with anchor elements <strong>&lt;a&gt;</strong> inside of the list elements <strong>&lt;li&gt;</strong>.
+        This is how an example of a <strong>breadcrumb</strong> with styling can look like:
+      </p>
+      <ul class="breadcrumb">
+        <li><a href="#">Hardware</a></li>
+        <li><a href="#">GPU</a></li>
+        <li><a href="#">NVIDIA Geforce RTX 3060</a></li>
+      </ul>
+      <h2>Styling</h2>
+      <p>
+        The styling for this type is very advanced. Therefore is here a link to the styling css where you can see the styling for the
+        <strong>breadcrumbs</strong> under the <strong>breadcrumbs</strong> section:
+        <strong><a href="https://github.com/nhamburg/nhamburg.github.io/blob/main/resources/styles.css">css file</a></strong>
+      </p>
+      <hr>
+    </div>
+  </div>
+  <div class="collapsible-container" id="container-3">
+    <div class="collapsible-header">
+      <span class="arrow">▼</span>
+      <h2 class="title">Colors</h2>
+    </div>
+    <div class="colors collapse">
+      <p>
+        With html and CSS there are multiple ways to utilize colors. There are the standard built-in colors
+        like <strong id="blue">blue</strong>, <strong id="green">green</strong>, <strong id="red">red</strong>
+        and on the other hand there are hsl colors which offer a much greater color palette where you can even
+        customize saturation and lightness. For example these are the same colors but this one <strong id="sat">is much
+        more saturated and darker</strong> and this one<strong id="lit"> is less saturated and lighter</strong></p>
+      <p>
+        There are different options to set colors. You can control the color of the text elements within an element with the
+        <strong>color:</strong> property and the background color with the <strong>background-color:</strong> property
+      </p>
+      <h2>Practice</h2>
+      <p>
+        Here are different possibilites to set the same color
+      </p>
+      <div class="list">
+        <ul>
+          <li id="blue-color">color: blue;</li>
+          <li id="blue-hex">color: #00F;</li>
+          <li id="blue-rgb">color: rgb(0, 0, 255);</li>
+          <li id="blue-hsl">color: hsl(240, 100%, 50%);</li>
+        </ul>
+      </div>
+      <p>
+        However, <strong>rgb</strong> and <strong>hsl</strong> have the option to customize the property <strong>opacity</strong>.
+        In order to do this you will have to call it for example <strong id="blue-oprgba">rgba(0, 0, 255, 0.5)</strong> this will give it 50% opacity.
+        The same goes for <strong id="blue-ophsla">hsla(240, 100%, 50%, 0.5)</strong>
+      </p>
+      <hr>
+    </div>
+  </div>
+  <div class="collapsible-container" id="container-4">
+    <div class="collapsible-header">
+      <span class="arrow">▼</span>
+      <h2 class="title">Web Responsiveness</h2>
+    </div>
+    <div class="web-response collapse">
+      <p>
+        It is important to provide a through out responsive website to achieve the best possible
+        user experience independently of the users' device and screen size.
+      </p>
+      <p>
+        Therefore, there is a technique called <strong>media queries</strong> which allows
+        you to set up rules in order to restructure the html's appearance based on the screens' size.
+        With the help of those queries you can avoid badly formatted html for every screen size.
+      </p>
+      <h2>Implementation</h2>
+      <p>
+        You have to fullfill one pre-requisite in order to use the <strong>media queries</strong> in your css files.
+      </p>
+      <p>
+        Inside of the html head add a viewport <strong>&lt;meta&gt;</strong> tag which allows us to control the width and scaling of
+        the viewport so that it’s sized and scaled correctly on all devices:
+      </p>
+      <p>
+        <htmlcode>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</htmlcode>
+      </p>
+      <p>
+        After that you can start writing <strong>media queries</strong> in your styling file.
+      </p>
+      <p>
+        For example the styling for this project contains this media query:
+      </p>
+      <p>
+        <css>
+          @media only screen and (min-width: 320px)
+          and (max-width: 480px), (orientation: portrait) {
+          p {
+          width: 90%;
+          font-size: 20px;
+          }
+          }
+        </css>
+      </p>
+      <p>
+        It is checking if the width is in between 320px and 480px or the orientation is portrait.
+        If one of those two checks is true it will rearrange the collabsible-container classes (the notes)
+        in order to make it more readable.
+      </p>
+      <hr>
+    </div>
+  </div>
+  <div class="placeholder"></div>
+  <footer>
+    <div class="footer-left">
+      <a href="https://github.com/nhamburg" target="_blank" id="author">Author: nhamburg</a>
+    </div>
+    <div class="footer-center">
+      <div class="fish-wrapper">
+        <img src="./resources/images/Brackets.png" alt="Brackets" class="footer-img bracket">
+        <img src="./resources/images/Fish.png" alt="Fish" class="footer-img fish">
+      </div>
+    </div>
+    <div class="footer-right"></div>
+  </footer>
+</div>
+</body>
 </html>
 
 <script>

@@ -1,6 +1,6 @@
 /* overall styling */
 * {
-  font-family: Montserrat, sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-align: center;
 }
 
@@ -8,17 +8,18 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  background: hsl(200, 80%, 10%) round;
+  background: hsl(200, 80%, 10%);
+  background-repeat: round;
 }
 
 header {
-  width: 100vw;
+  width: 100%;
   display: flex;
   box-sizing: border-box;
   align-items: center;
   justify-content: center;
   background-image: url('https://brueserwebdesign.de/wp-content/uploads/2023/09/code-og.webp');
-  background-size: initial;
+  background-size: fixed;
   background-position: center;
   padding: 50px;
 }
@@ -35,7 +36,8 @@ p {
   width: 60%;
   position: relative;
   text-align: center;
-  margin: 0 auto 20px;
+  margin: 0 auto;
+  margin-bottom: 20px;
 }
 
 hr {
@@ -44,8 +46,24 @@ hr {
   margin-top: 40px;
 }
 
+css, htmlcode {
+  display: block;
+  background-color: #ddd;
+  border: #ddd 1px solid;
+  border-radius: 6px;
+  font-family: "Google Sans Code", sans-serif;
+  line-height: 1.2;
+  padding: 8px 12px;
+  overflow-x: auto;
+  white-space: pre;
+  text-align: left;
+}
+htmlcode {
+  text-align: center;
+}
+
 a:link {
-  color: hsl(240, 100%, 50%);
+  color: hsl(240, 88%, 7%);
 }
 a:hover {
   color: hsl(240, 100%, 70%);
@@ -59,16 +77,14 @@ a:visited {
   display: flex;
   justify-content: center;
   background-color: hsl(200, 80%, 20%);
-  padding: 15px 0;
   flex-wrap: wrap;
   position: sticky;
   top: 0;
   z-index: 1000;
-}
-.nav {
-  margin: 0 1px;
+  column-gap: 2px;
 }
 .nav a {
+  display: inline-flex;
   color: white;
   text-decoration: none;
   font-weight: bold;
@@ -130,10 +146,11 @@ table, th, td {
   width: 60%;
   position: relative;
   text-align: center;
-  margin: 0 auto 20px;
+  margin: 0 auto;
+  margin-bottom: 20px;
 }
 .list ul {
-  list-style-type: none; 
+  list-style-type: none;
   padding-left: 0;
   margin: 0;
 }
@@ -167,10 +184,10 @@ table, th, td {
   color: hsl(240, 100%, 50%);
 }
 #blue-oprgba{
-  color: rgba(0, 0, 255, 0.5); 
+  color: rgba(0, 0, 255, 0.5);
 }
 #blue-ophsla{
-  color: hsla(240, 100%, 50%, 0.5); 
+  color: hsla(240, 100%, 50%, 0.5);
 }
 
 /* breadcrumb section */
@@ -178,7 +195,7 @@ table, th, td {
   display: flex;
   justify-content: center;
   padding: 0;
-  margin: 20px 0;
+  margin: 20px auto;
 }
 .breadcrumb li {
   list-style-type: none;
@@ -287,4 +304,15 @@ footer {
 }
 #author:active {
   color: #757575;
+}
+
+/*media queries*/
+@media only screen and (min-width: 320px) and (max-width: 480px), (orientation: portrait) {
+  p {
+    width: 90%;
+    font-size: 20px;
+  }
+  css, htmlcode {
+    font-size: 13px;
+  }
 }
