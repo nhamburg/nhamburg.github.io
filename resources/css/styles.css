@@ -38,6 +38,7 @@ p {
   text-align: center;
   margin: 0 auto;
   margin-bottom: 20px;
+  font-size: 20px;
 }
 
 hr {
@@ -46,20 +47,20 @@ hr {
   margin-top: 40px;
 }
 
-css, htmlcode {
-  display: block;
+codeblock {
+  display: flex;
   background-color: #ddd;
   border: #ddd 1px solid;
   border-radius: 6px;
   font-family: "Google Sans Code", sans-serif;
+  font-size: 16px;
   line-height: 1.2;
-  padding: 8px 12px;
+  padding: 30px 20px;
   overflow-x: auto;
-  white-space: pre;
+  white-space: pre-line;
+  text-wrap-mode: nowrap;
+  justify-content: space-around;
   text-align: left;
-}
-htmlcode {
-  text-align: center;
 }
 
 a:link {
@@ -307,12 +308,18 @@ footer {
 }
 
 /*media queries*/
-@media only screen and (min-width: 320px) and (max-width: 480px), (orientation: portrait) {
+@media only screen and (max-width: 480px), (orientation: portrait) {
   p {
     width: 90%;
-    font-size: 20px;
+    font-size: 14px;
   }
-  css, htmlcode {
+  codeblock {
     font-size: 13px;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  .breadcrumb {
+    font-size: 8px;
   }
 }

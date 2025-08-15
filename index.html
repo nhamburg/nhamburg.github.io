@@ -198,7 +198,7 @@
         the viewport so that it’s sized and scaled correctly on all devices:
       </p>
       <p>
-        <htmlcode>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</htmlcode>
+        <codeblock>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</codeblock>
       </p>
       <p>
         After that you can start writing <strong>media queries</strong> in your styling file.
@@ -207,18 +207,24 @@
         For example the styling for this project contains this media query:
       </p>
       <p>
-        <css>
-          @media only screen and (min-width: 320px)
-            and (max-width: 480px), (orientation: portrait) {
-            p {
-              width: 90%;
-              font-size: 20px;
-            }
-          }
-        </css>
+        <codeblock>@media only screen and (max-width: 480px), (orientation: portrait) {
+          &nbsp&nbspp {
+            &nbsp&nbsp&nbsp&nbspwidth: 90%;
+            &nbsp&nbsp&nbsp&nbspfont-size: 14px;
+          &nbsp&nbsp}
+          &nbsp&nbspcodeblock {
+            &nbsp&nbsp&nbsp&nbspfont-size: 13px;
+          &nbsp&nbsp}
+          &nbsp&nbsph1 {
+            &nbsp&nbsp&nbsp&nbspfont-size: 30px;
+          &nbsp&nbsp}
+          &nbsp&nbsp.breadcrumb {
+            &nbsp&nbsp&nbsp&nbspfont-size: 8px;
+          &nbsp&nbsp}
+        }</codeblock>
       </p>
       <p>
-        It is checking if the width is in between 320px and 480px or the orientation is portrait.
+        It is checking if the width is below 480px or the orientation is portrait.
         If one of those two checks is true it will rearrange the collapsible-container classes (the notes)
         in order to make it more readable.
       </p>
